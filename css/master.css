@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Tahoma", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffe;
+    text-align: center;
+}
+
+#wrapper {
+    max-width: 800px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #ffd;
+    min-height: 100vh;
+    border-left: 2px solid #fcc;
+    box-shadow: 10px 50px 10px #ccc;
+}
+
+header {
+    margin: 0 auto;
+    border-bottom: 1px solid #ccf;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #333;
+    margin: 100px 0 50px 0;
+    text-shadow: 1px 1px 4px;
+}
+
+#new-task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#new-task-input {
+    margin: 0 auto;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ddb;
+    outline: none;
+}
+
+#new-task-submit {
+    margin: 5px auto 0 auto;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ddb;
+    width: 90%;
+    background-color: #eed;
+    font-size: 18px;
+}
+
+#new-task-submit:hover {
+    background-color: #ffe;
+    transition: 0.2s;
+}
+
+#new-task-submit:active {
+    background-color: #ddb;
+    transition: 0s;
+}
+
+main {
+    padding-top: 30px;
+    margin: 20px auto;
+}
+
+h2 {
+    border-bottom: 1px solid #ccf;
+    color: #333;
+}
+
+#tasks {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.task {
+    margin-top: 10px;
+    min-width: 200px;
+}
+
+.task .content input {
+    width: 90%;
+    border: 1px solid #ddb;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ffd;
+    color: #44a;
+}
+
+
+.task .actions button {
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid #ddb;
+    text-transform: uppercase;
+}
+
+.actions .edit {
+    background-color: #eed;
+}
+
+.task .text:not(:read-only) {
+    background-color: #fff;
+}
+
+.task .text:focus {
+    border: 1px solid #ddb;
+    outline: none;
+}
+
+.actions .remove {
+    background-color: #faa;
+    color: #fff
+}
+
+.actions .remove:hover {
+    background-color: #fbb;
+    color: #f66;
+    transition: 0.3s;
+}
+
+.actions .edit:hover {
+    background-color: #ffe;
+    transition: 0.3s;
+}
+
+.actions .edit:active {
+    background-color: #ddb;
+    transition: 0s;
+}
+
+.task::after {
+    content: "";
+    display: block;
+    clear: both;
+    border-bottom: 1px solid #ccf;
+    margin: 5px 0 10px 0;
+}
